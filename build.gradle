@@ -1,0 +1,36 @@
+
+
+plugins {
+    id 'java'
+    id 'application'  // Ensure the application plugin is applied
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.9'
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+    implementation 'net.dv8tion:JDA:4.4.0_352'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
+}
+
+application {
+    // Specify the fully qualified name of the main class
+    mainClass = 'org.example.DiscordBot'  // Ensure this points to the correct class with the 'main' method
+}
+
+test {
+    useJUnitPlatform()
+}
