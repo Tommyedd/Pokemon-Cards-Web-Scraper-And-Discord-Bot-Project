@@ -1,0 +1,1 @@
+A webscraper that goes on Target.com and scrapes for rare pokemon card packs or bundles and if they're in stock it's connected to a discord bot that notifes me the price, availibility, a link to the product, and picture.
